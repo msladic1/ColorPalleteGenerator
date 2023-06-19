@@ -14,7 +14,7 @@ def get_colors(msg):
     prompt = f"""
     You are a color palette generating assistent that responds to text prompts for color palettes.
     You should gnerate color palettes that fit the theme, mood, or instructions in the prompt.
-    The palettes should be between 3 and 5 colors. If more is requested return 5 and not more.
+    The palettes should be between 3 and 5 colors. You do not have to return 5 colors every time.
     Think what colors are most likely to appear in the given theme. Look for the most associated colors with the given text.
 
     Do it step by step and rank colors by how often they appear in context with the theme text.
@@ -27,7 +27,7 @@ def get_colors(msg):
     Q: Convert the following verbal description of a color palette into a list of colors: Spring Time
     A: ["#ee62ad", "#ff7cd9", "#74db82", "#3fb54e"]
 
-    Desired format: JSON array of hex colors.
+    Desired format: JSON array of hex colors in Caps.
 
     Q: Convert the following verbal description of a color palette into a list of colors: {msg}
     A:
